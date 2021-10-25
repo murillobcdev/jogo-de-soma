@@ -1,122 +1,148 @@
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing:content-box;
-    color:white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
-:root{
-    --border-color:purple;
-    --border-color-acertou:green;
-    --border-color-errou:red;
-    --border-color-vazio:white;
+
+:root {
+    --border-color: rgb(247, 255, 94);
+    --border-color-acertou: rgb(0, 140, 0);
+    --border-color-errou: rgb(255, 0, 0);
+    --border-color-vazio: rgb(255, 255, 255);
 }
-header, footer{
-    height:80px;
-    background-color:black;
-    width:auto;
-    border:3px solid var(--border-color);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+header, footer {
+    height: 80px;
+    background-color: black;
+    width: auto;
+    border: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-main{
-    background-color:#333;
-    border:3px solid var(--border-color);
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+kbd {
+    color: #fff;
+    background-color: #555;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 25%);
+    padding: 3px;
+}
+
+p {
+    font-size: 12px;
+}
+
+main {
+    background-color: #333;
+    border: 3px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-flow: column;
-    height:calc(100vh - 178px);
+    height: calc(100vh - 178px);
 }
-main span, button{
-    margin-top:15px;
+
+main span {
+    margin: 15px;
 }
-.numeros{
-    display:flex;
+
+.numeros {
+    display: flex;
 }
-.numero1, .numero2, input{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:150px;
-    height:150px;
-    font-size:65px;
-    border:3px solid var(--border-color);
-    border-radius:15px;
-    background-color:black;
-    margin:10px 10px;
-    padding:15px;
-    outline:none;
-    text-align:center;
+
+.numero1, .numero2, input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    font-size: 65px;
+    border: 3px solid var(--border-color);
+    border-radius: 15px;
+    background-color: black;
+    margin: 10px 10px;
+    padding: 15px;
+    outline: none;
+    text-align: center;
 }
-button{
-    margin-bottom:20px;
-    color:black;
-    padding:10px;
+
+.score {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
 }
-@keyframes piscar{
-    0%{
-        border:3px solid var(--border-color-acertou);
+
+@keyframes piscar {
+    0% {
+        border: 3px solid var(--border-color-acertou);
     }
-    50%{
-        border:3px solid var(--border-color);
+    50% {
+        border: 3px solid var(--border-color);
     }
-    100%{
-        border:3px solid var(--border-color-acertou);
+    100% {
+        border: 3px solid var(--border-color-acertou);
     }
 }
 
-@keyframes piscarErrou{
-    0%{
-        border:3px solid var(--border-color-errou);
+@keyframes piscarErrou {
+    0% {
+        border: 3px solid var(--border-color-errou);
     }
-    50%{
-        border:3px solid var(--border-color);
+    50% {
+        border: 3px solid var(--border-color);
     }
-    100%{
-        border:3px solid var(--border-color-errou);
-    }
-}
-@keyframes piscarVazio{
-    0%{
-        border:3px solid var(--border-color-vazio);
-    }
-    50%{
-        border:3px solid var(--border-color);
-    }
-    100%{
-        border:3px solid var(--border-color-vazio);
+    100% {
+        border: 3px solid var(--border-color-errou);
     }
 }
-.acertou{
-    animation-name:piscar;
-    animation-duration:0.3s;
+
+@keyframes piscarVazio {
+    0% {
+        border: 3px solid var(--border-color-vazio);
+    }
+    50% {
+        border: 3px solid var(--border-color);
+    }
+    100% {
+        border: 3px solid var(--border-color-vazio);
+    }
+}
+
+.acertou {
+    animation-name: piscar;
+    animation-duration: 0.3s;
     animation-iteration-count: infinite;
-    
 }
-.errou{
-    animation-name:piscarErrou;
-    animation-duration:0.3s;
-    animation-iteration-count:infinite;
+
+.errou {
+    animation-name: piscarErrou;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
 }
-.campoVazio{
-    animation-name:piscarVazio;
-    animation-duration:0.3s;
-    animation-iteration-count:infinite;
+
+.campoVazio {
+    animation-name: piscarVazio;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
 }
+
 @keyframes titulo {
-    0%{
-        background-color:var(--border-color-errou);
+    0% {
+        background-color: var(--border-color-errou);
     }
-    100%{
+    100% {
         background-color: rgba(0, 0, 0, 0.2);
     }
 }
-.titulo{
-    color:white;
-    padding:0px 5px;
-    border-radius:15px;
-    animation-name:titulo;
-    animation-duration:3s;
+
+.titulo {
+    color: white;
+    padding: 0px 5px;
+    border-radius: 15px;
+    animation-name: titulo;
+    animation-duration: 3s;
 }

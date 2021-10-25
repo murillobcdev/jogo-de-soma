@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Soma</title>
-    <link rel="stylesheet" type="text/css" href="decoration.css"/>
+    <link rel="stylesheet" type="text/css" href="decoration.css" />
 </head>
+
 <body>
     <header>
         <h1>Jogo de Soma Rápida</h1>
     </header>
     <main>
-        <span class="">Some os dois números, coloque o resultado no final e clique em Enviar Resultado!</span>
+        <span class="header">Some os dois números, coloque no campo e aperte Enter!</span>
+        <p><kbd>Enter</kbd> para enviar e <kbd>Del</kbd> para novos valores.</p>
         <div class="numeros">
             <div class="numero1"></div>
             <div class="numero2"></div>
         </div>
         <input type="text" class="resultadoUsuario">
-        <div class="botões">
-            <button value="enviar" onclick="resultado()">Enviar resultado</button>
-            <button value="enviar" onclick="verificar()">Resetar</button>
-            <button value="enviar" onclick="pontuacao()">Minha pontuação</button>
-    </div>
+        <div class="score">
+            <span class="acertos">Acertos:</span>
+            <span class="erros">Erros:</span>
+        </div>
     </main>
     <footer>
         <span>Criado por Murillo - B7Web</span>
     </footer>
-<script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
