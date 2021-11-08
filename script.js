@@ -14,6 +14,7 @@ document.addEventListener('keydown', function (e) {
 }, false);
 
 function verificar() {
+
     let r1 = Math.floor(Math.random() * 25);
     let r2 = Math.floor(Math.random() * 25);
 
