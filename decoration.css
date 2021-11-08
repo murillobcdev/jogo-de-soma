@@ -8,10 +8,10 @@
 }
 
 :root {
-    --border-color: rgb(247, 255, 94);
-    --border-color-acertou: rgb(0, 140, 0);
-    --border-color-errou: rgb(255, 0, 0);
-    --border-color-vazio: rgb(255, 255, 255);
+    --border-color: purple;
+    --border-color-acertou: green;
+    --border-color-errou: red;
+    --border-color-vazio: white;
 }
 
 header, footer {
@@ -74,6 +74,16 @@ main span {
     display: flex;
     flex-flow: column;
     text-align: center;
+}
+
+.score p {
+    font-size: 20px;
+    margin:10px;
+}
+
+.score a{
+    background-color:var(--border-color);
+    text-decoration: none;
 }
 
 @keyframes piscar {
